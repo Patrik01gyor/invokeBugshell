@@ -48,6 +48,7 @@ function Invoke-ConPtyShell
 }
 
 $Source = @"
+
 using System;
 using System.IO;
 using System.Text;
