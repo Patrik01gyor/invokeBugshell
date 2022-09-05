@@ -1439,4 +1439,3 @@ public static class ConPtyShell
                 if (shellSocket == IntPtr.Zero)
                 {
                     output += string.Format("{0}Could not connect to ip {1} on port {2}", errorString, remoteIp, remotePort.ToString());
-"
