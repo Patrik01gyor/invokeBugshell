@@ -1,65 +1,66 @@
 import os
-
+import sys
 try:
     import socket
 except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install socket")
+    os.system("pip3 install socket")
+    import socket
 try:
     import subprocess
 except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install subprocess")
+    os.system("pip3 install subprocess")
+    import subprocess
 try:
     import getpass
 except:
-    os.system("pip install")
-    os.system("pip3 install")
-try:
-    import time
-except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install getpass")
+    os.system("pip3 install getpass")
+    import getpass
+import time
 try:
     import re
 except:
-    os.system("pip install")
-    os.system("pip3 install")
-try:
-    import sys
-except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install re")
+    os.system("pip3 install re")
+    import re
 try:
     import keyboard
 except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install keyboard")
+    os.system("pip3 install keyboard")
+    import keyboard
 try:
     import shutil
 except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install shutil")
+    os.system("pip3 install shutil")
+    import shutil
 try:
     from threading import Thread
 except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install threading")
+    os.system("pip3 install threading")
+    from threading import Thread
 try:
     from tkinter import messagebox
 except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install tkinter")
+    os.system("pip3 install tkinter")
+    from tkinter import messagebox
 try:
     import cv2
 except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install opencv-python")
+    os.system("pip3 install opencv-python")
+    import cv2
 try:
     import pyautogui
 except:
-    os.system("pip install")
-    os.system("pip3 install")
+    os.system("pip install pyautogui")
+    os.system("pip3 install pyautogui")
+    import pyautogui
 
 try:
     pfilename = str(os.path.basename(sys.executable))
